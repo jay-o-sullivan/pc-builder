@@ -64,39 +64,74 @@ while True:
     type_effect("Choose an option:")
     option = display_menu(["Build a PC", "Prebuilt PCs", "Exit"])
     os.system('clear' if os.name == 'posix' else 'cls')
-
+    print()
     if option == "1":
         cpu = select_component(cpu_sheet, "CPU")
+        print()
         motherboard = select_component(motherboard_sheet, "Motherboard")
+        print()
         gpu = select_component(gpu_sheet, "GPU")
+        print()
         ram = select_component(ram_sheet, "RAM")
+        print()
         storage = select_component(storage_sheet, "Storage")
+        print()
         powersupply = select_component(powersupply_sheet, "PowerSupply")
+        print()
         case = select_component(case_sheet, "Case")
+        print()
 
         # Calculate total price of the build
         total_price = cpu["Price"] + motherboard["Price"] + gpu["Price"] + ram["Price"] + storage["Price"] + powersupply["Price"] + case["Price"]
         print(f"Total Price: ${total_price}")
+        print()
+
+        builds_sheet.append_row([
+            cpu["Model"],
+            motherboard["Model"],
+            gpu["Model"],
+            ram["Model"],
+            storage["Model"],
+            powersupply["Model"],
+            case["Model"],
+            total_price
+        ])
+        print("Build configuration saved to 'Builds' worksheet.")
+        print()
 
     elif option == "2":
         prebuilt_option = display_menu(["Under $1000", "Under $2000", "Under $4000"])
         prebuilt_records = prebuilts_sheet.get_all_records()
+        matching_prebuilts = []
+
         for prebuilt in prebuilt_records:
-            if prebuilt["Configuration"] == prebuilt_option:
-                print(f"Prebuilt Configuration: {prebuilt['Configuration']}")
-                print(f"CPU: {prebuilt['CPU Model']}")
-                print(f"Motherboard: {prebuilt['Motherboard Model']}")
-                print(f"RAM: {prebuilt['RAM Model']}")
-                print(f"GPU: {prebuilt['GPU Model']}")
-                print(f"Storage: {prebuilt['Storage Model']}")
-                print(f"PowerSupply: {prebuilt['PowerSupply Model']}")
-                print(f"Case: {prebuilt['Case Model']}")
-                print(f"Total Price: ${prebuilt['Total Price']}")
+            configuration = prebuilt["Configuration"]
+            if ("Under $1000" in prebuilt_option and "1000" in configuration) or \
+               ("Under $2000" in prebuilt_option and "2000" in configuration) or \
+               ("Under $4000" in prebuilt_option and "4000" in configuration):
+                matching_prebuilts.append(prebuilt)
+
+        if matching_prebuilts:
+            print(f"Matching {prebuilt_option} prebuilt configurations:")
+            for idx, prebuilt in enumerate(matching_prebuilts, start=1):
+                print(f"{idx}. Configuration: {prebuilt['Configuration']}")
+
+            selected_idx = int(input("Select a prebuilt configuration (enter number): ")) - 1
+
+            if 0 <= selected_idx < len(matching_prebuilts):
+                selected_prebuilt = matching_prebuilts[selected_idx]
+                print(f"Selected Prebuilt Configuration: {selected_prebuilt['Configuration']}")
+                print(f"CPU: {selected_prebuilt['CPU Model']}")
+                print(f"Motherboard: {selected_prebuilt['Motherboard Model']}")
+                print(f"RAM: {selected_prebuilt['RAM Model']}")
+                print(f"GPU: {selected_prebuilt['GPU Model']}")
+                print(f"Storage: {selected_prebuilt['Storage Model']}")
+                print(f"PowerSupply: {selected_prebuilt['PowerSupply Model']}")
+                print(f"Case: {selected_prebuilt['Case Model']}")
+            print(f"Total Price: ${selected_prebuilt['Total Price']}")
+        else:
+            print("Invalid selection.")
 
     elif option == "3":
         type_effect("Thank you for using PC Part Picker!")
         break
-
-
-#if __name__ == "__main__":
-#    main()
