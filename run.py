@@ -33,7 +33,7 @@ def select_component(sheet, component_type):
 
 
 def main():
-    type_effect("Welcome to PC Part Picker!")
+    type_effect("Welcome to PC Part Picker!\n")
 
 
 SCOPE = [
@@ -61,7 +61,7 @@ case_sheet = SHEET.worksheet("Case")
 
 
 while True:
-    type_effect("Choose an option:")
+    type_effect("Choose an option:\n")
     option = display_menu(["Build a PC", "Prebuilt PCs", "Exit"])
     os.system('clear' if os.name == 'posix' else 'cls')
     print()
@@ -83,8 +83,7 @@ while True:
 
         # Calculate total price of the build
         total_price = cpu["Price"] + motherboard["Price"] + gpu["Price"] + ram["Price"] + storage["Price"] + powersupply["Price"] + case["Price"]
-        print(f"Total Price: ${total_price}")
-        print()
+        print(f"Total Price: ${total_price}\n")
 
         builds_sheet.append_row([
             cpu["Model"],
@@ -96,8 +95,8 @@ while True:
             case["Model"],
             total_price
         ])
-        print("Build configuration saved to 'Builds' worksheet.")
-        print()
+        print("Build configuration saved to 'Builds' worksheet.\n")
+        
 
     elif option == "2":
         prebuilt_option = display_menu(["Under $1000", "Under $2000", "Under $4000"])
@@ -128,8 +127,8 @@ while True:
                 print(f"Case: {selected_prebuilt['Case Model']}")
                 print(f"Total Price: ${selected_prebuilt['Total Price']}")
         else:
-            print("Invalid selection.")
+            print("Invalid selection.\n")
 
     elif option == "3":
-        type_effect("Thank you for using PC Part Picker!")
+        type_effect("Thank you for using PC Part Picker!\n")
         break
