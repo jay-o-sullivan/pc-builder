@@ -106,9 +106,7 @@ while True:
 
         for prebuilt in prebuilt_records:
             configuration = prebuilt["Configuration"]
-            if ("Under $1000" in prebuilt_option and "1000" in configuration) or \
-               ("Under $2000" in prebuilt_option and "2000" in configuration) or \
-               ("Under $4000" in prebuilt_option and "4000" in configuration):
+            if prebuilt_option in configuration:
                 matching_prebuilts.append(prebuilt)
 
         if matching_prebuilts:
@@ -128,7 +126,7 @@ while True:
                 print(f"Storage: {selected_prebuilt['Storage Model']}")
                 print(f"PowerSupply: {selected_prebuilt['PowerSupply Model']}")
                 print(f"Case: {selected_prebuilt['Case Model']}")
-            print(f"Total Price: ${selected_prebuilt['Total Price']}")
+                print(f"Total Price: ${selected_prebuilt['Total Price']}")
         else:
             print("Invalid selection.")
 
