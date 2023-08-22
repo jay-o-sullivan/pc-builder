@@ -128,6 +128,6 @@ while True:
         else:
             print("Invalid selection.\n")
 
-    elif option == "4":
+    elif option == "3":
         type_effect("Thank you for using PC Part Picker!\n")
         break
