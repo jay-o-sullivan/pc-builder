@@ -95,7 +95,7 @@ while True:
             case["Model"],
             total_price
         ])
-        print("Build configuration saved to 'Builds' worksheet.\n")   
+        print("Build configuration saved to 'Builds' worksheet.\n")
 
     elif option == "2":
         prebuilt_option = display_menu(["Under $1000", "Under $2000", "Under $4000"])
@@ -125,6 +125,7 @@ while True:
                 print(f"PowerSupply: {selected_prebuilt['PowerSupply Model']}")
                 print(f"Case: {selected_prebuilt['Case Model']}")
                 print(f"Total Price: {selected_prebuilt['Total Price']}")
+    
         else:
             print("Invalid selection.\n")
 
