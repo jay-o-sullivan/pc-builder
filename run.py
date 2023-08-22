@@ -83,7 +83,7 @@ while True:
 
         # Calculate total price of the build
         total_price = cpu["Price"] + motherboard["Price"] + gpu["Price"] + ram["Price"] + storage["Price"] + powersupply["Price"] + case["Price"]
-        print(f"Total Price: ${total_price}\n")
+        print(f"Total Price: {total_price}\n")
 
         builds_sheet.append_row([
             cpu["Model"],
@@ -95,8 +95,7 @@ while True:
             case["Model"],
             total_price
         ])
-        print("Build configuration saved to 'Builds' worksheet.\n")
-        
+        print("Build configuration saved to 'Builds' worksheet.\n")   
 
     elif option == "2":
         prebuilt_option = display_menu(["Under $1000", "Under $2000", "Under $4000"])
@@ -125,10 +124,10 @@ while True:
                 print(f"Storage: {selected_prebuilt['Storage Model']}")
                 print(f"PowerSupply: {selected_prebuilt['PowerSupply Model']}")
                 print(f"Case: {selected_prebuilt['Case Model']}")
-                print(f"Total Price: ${selected_prebuilt['Total Price']}")
+                print(f"Total Price: {selected_prebuilt['Total Price']}")
         else:
             print("Invalid selection.\n")
 
-    elif option == "3":
+    elif option == "4":
         type_effect("Thank you for using PC Part Picker!\n")
         break
