@@ -95,8 +95,9 @@ def main():
             print("Build configuration saved to 'Builds' worksheet.\n")
 
         elif option == "2":
-            prebuilt_option = display_menu(["Under $1000", "Under $2000", "Under $4000"])
+            prebuilt_option = display_menu(["Under $1000", "Under $2000"])
             prebuilt_records = prebuilts_sheet.get_all_records()
+            print(prebuilt_records)
             matching_prebuilts = []
 
             for prebuilt in prebuilt_records:
@@ -123,13 +124,12 @@ def main():
                     print(f"Case: {selected_prebuilt['Case Model']}")
                     print(f"Total Price: {selected_prebuilt['Total Price']}")
 
-            else:
-                print("Invalid selection.\n")
+                elif option == "3":
+                    type_effect("Thank you for using PC Part Picker!\n")
+                    break
 
-        elif option == "3":
-            type_effect("Thank you for using PC Part Picker!\n")
-            break
-
+                else:
+                    print("Invalid selection.\n")
 
 if __name__ == "__main__":
     main()
