@@ -21,7 +21,6 @@ def display_menu(options):
         try:
             choice = int(input("Select an option: "))
             if 1 <= choice <= len(options):
-
                 return str(choice)
             else:
                 print("Invalid input. Please enter a valid number.")
@@ -71,8 +70,8 @@ def select_component(sheet, component_type):
 # Function to display an introduction to the app
 def display_introduction():
     type_effect("Welcome to PC Part Picker!")
-    type_effect("This application allows you to Create your own PC "
-                "or Choose from Prebuilt options.")
+    type_effect("This application allows you to create your own PC "
+                "or choose from prebuilt options.")
     type_effect("You can also save your custom "
                 "builds and search for them later.")
     type_effect("Let's get started!\n")
@@ -93,8 +92,8 @@ def search_build_by_name(sheet, name):
                     name.lower() in
                     build['Configuration'].lower().strip()):
                 matching_builds.append(build)
-                print(f"Match found: {build['Name']} - \
-                {build['Configuration']}")
+                print(f"Match found: {build['Name']} - "
+                      f"{build['Configuration']}")
 
     return matching_builds
 
@@ -161,11 +160,11 @@ def main():
 
             publish_build = input(
                 "Do you want to publish this build? (yes/no): "
-                )
+            )
             if publish_build.lower() == "yes":
                 # Get the build name from the user
                 build_name = input("Enter a name for this build: ")
-                # Save as custom build
+                # Save as a custom build
                 builds_sheet.append_row([
                     user_name,
                     build_name,
@@ -201,36 +200,34 @@ def main():
                     matching_prebuilts.append(prebuilt)
 
             if matching_prebuilts:
-                print(f"Matching{'Under $1000' if prebuilt_option == 1 \
-                       else'Under $2000'}prebuilt configurations: ")
+                prebuilt_label = "Under $1000" if prebuilt_option == 1 else "Under $2000"
+                print(f"Matching {prebuilt_label} prebuilt configurations: ")
                 for idx, prebuilt in enumerate(matching_prebuilts, start=1):
                     print(f"{idx}. Configuration: {prebuilt['Configuration']}")
 
-                selected_idx = get_valid_integer_input
-                ("Select a prebuilt configuration (enter number): ") - 1
+                selected_idx = get_valid_integer_input(
+                    "Select a prebuilt configuration (enter number): "
+                ) - 1
 
                 if 0 <= selected_idx < len(matching_prebuilts):
                     selected_prebuilt = matching_prebuilts[selected_idx]
-                    print(f"Selected Prebuilt Configuration: \
-                          {selected_prebuilt['Configuration']}")
+                    print(f"Selected Prebuilt Configuration: "
+                          f"{selected_prebuilt['Configuration']}")
                     print(f"CPU: {selected_prebuilt['CPU Model']}")
-                    print(f"Motherboard: \
-                          {selected_prebuilt['Motherboard Model']}")
+                    print(f"Motherboard: "
+                          f"{selected_prebuilt['Motherboard Model']}")
                     print(f"RAM: {selected_prebuilt['RAM Model']}")
                     print(f"GPU: {selected_prebuilt['GPU Model']}")
                     print(f"Storage: {selected_prebuilt['Storage Model']}")
-                    print(f"PowerSupply: \
-                          {selected_prebuilt['PowerSupply Model']}")
+                    print(f"PowerSupply: "
+                          f"{selected_prebuilt['PowerSupply Model']}")
                     print(f"Case: {selected_prebuilt['Case Model']}")
-                    print(f"Total Price: \
-                          {selected_prebuilt['Total Price']}\n")
+                    print(f"Total Price: "
+                          f"{selected_prebuilt['Total Price']}\n")
 
-                    input(
-                        "Press Enter to return to the PC configuration"
-                        )
+                    input("Press Enter to return to the PC configuration")
             else:
-                print(f"No matching {'Under $1000' if prebuilt_option == 1 else 'Under $2000'} 
-                      prebuilt configurations found.\n")
+                print(f"No matching {prebuilt_label} prebuilt configurations found.\n")
 
         elif option == "3":
             # Search for builds by name
@@ -253,7 +250,8 @@ def main():
                     "RAM",
                     "Storage",
                     "Power Supply",
-                    "Case"]
+                    "Case"
+                ]
                 print("\nComponents:")
                 for component in components:
                     if component in matching_build:
