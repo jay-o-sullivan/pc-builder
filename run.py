@@ -71,9 +71,8 @@ def select_component(sheet, component_type):
 # Function to display an introduction to the app
 def display_introduction():
     type_effect("Welcome to PC Part Picker!")
-    type_effect
-    ("This application allows you to build your own PC configuration \
-      or choose from prebuilt options.")
+    type_effect("This application allows you to Create your own PC "
+                "or Choose from Prebuilt options.")
     type_effect("You can also save your custom "
                 "builds and search for them later.")
     type_effect("Let's get started!\n")
@@ -86,10 +85,16 @@ def search_build_by_name(sheet, name):
     print(f"Searching for builds with name '{name}'")
 
     for build in builds:
-        if 'Name' in build and 'Configuration' in build and 'Total Price' in build:
-            if name.lower() in build['Name'].lower().strip() or name.lower() in build['Configuration'].lower().strip():
+        if ('Name' in build and
+                'Configuration' in build and
+                'Total Price' in build):
+            if (name.lower() in
+                    build['Name'].lower().strip() or
+                    name.lower() in
+                    build['Configuration'].lower().strip()):
                 matching_builds.append(build)
-                print(f"Match found: {build['Name']} - {build['Configuration']}")
+                print(f"Match found: {build['Name']} - \
+                {build['Configuration']}")
 
     return matching_builds
 
@@ -173,7 +178,7 @@ def main():
                     case["Model"],
                     total_price
                 ])
-                print(f"Build configuration '{build_name}' saved to 'Builds' worksheet.\n")
+                print(f"Build configuration '{build_name}' saved.\n")
 
         elif option == "2":
             while True:
@@ -200,25 +205,31 @@ def main():
                 for idx, prebuilt in enumerate(matching_prebuilts, start=1):
                     print(f"{idx}. Configuration: {prebuilt['Configuration']}")
 
-                selected_idx = get_valid_integer_input("Select a prebuilt configuration (enter number): ") - 1
+                selected_idx = get_valid_integer_input
+                ("Select a prebuilt configuration (enter number): ") - 1
 
                 if 0 <= selected_idx < len(matching_prebuilts):
                     selected_prebuilt = matching_prebuilts[selected_idx]
-                    print(f"Selected Prebuilt Configuration: {selected_prebuilt['Configuration']}")
+                    print(f"Selected Prebuilt Configuration: \
+                          {selected_prebuilt['Configuration']}")
                     print(f"CPU: {selected_prebuilt['CPU Model']}")
-                    print(f"Motherboard: {selected_prebuilt['Motherboard Model']}")
+                    print(f"Motherboard: \
+                          {selected_prebuilt['Motherboard Model']}")
                     print(f"RAM: {selected_prebuilt['RAM Model']}")
                     print(f"GPU: {selected_prebuilt['GPU Model']}")
                     print(f"Storage: {selected_prebuilt['Storage Model']}")
                     print(f"PowerSupply: {selected_prebuilt['PowerSupply Model']}")
                     print(f"Case: {selected_prebuilt['Case Model']}")
-                    print(f"Total Price: {selected_prebuilt['Total Price']}\n")
+                    print(f"Total Price: \
+                          {selected_prebuilt['Total Price']}\n")
 
                     input(
-                        "Press Enter to return to the PC configuration selection screen..."
+                        "Press Enter to return to the PC configuration"
                         )
             else:
-                print(f"No matching {'Under $1000' if prebuilt_option == 1 else 'Under $2000'} prebuilt configurations found.\n")
+                print(f"No matching \
+                      {'Under $1000' if prebuilt_option == 1 else 'Under $2000'} \
+                       prebuilt configurations found.\n")
 
         elif option == "3":
             # Search for builds by name
