@@ -201,7 +201,8 @@ def main():
                     matching_prebuilts.append(prebuilt)
 
             if matching_prebuilts:
-                print(f"Matching {'Under $1000' if prebuilt_option == 1 else 'Under $2000'} prebuilt configurations:")
+                print(f"Matching{'Under $1000' if prebuilt_option == 1 \
+                       else'Under $2000'}prebuilt configurations: ")
                 for idx, prebuilt in enumerate(matching_prebuilts, start=1):
                     print(f"{idx}. Configuration: {prebuilt['Configuration']}")
 
@@ -218,7 +219,8 @@ def main():
                     print(f"RAM: {selected_prebuilt['RAM Model']}")
                     print(f"GPU: {selected_prebuilt['GPU Model']}")
                     print(f"Storage: {selected_prebuilt['Storage Model']}")
-                    print(f"PowerSupply: {selected_prebuilt['PowerSupply Model']}")
+                    print(f"PowerSupply: \
+                          {selected_prebuilt['PowerSupply Model']}")
                     print(f"Case: {selected_prebuilt['Case Model']}")
                     print(f"Total Price: \
                           {selected_prebuilt['Total Price']}\n")
@@ -227,9 +229,8 @@ def main():
                         "Press Enter to return to the PC configuration"
                         )
             else:
-                print(f"No matching \
-                      {'Under $1000' if prebuilt_option == 1 else 'Under $2000'} \
-                       prebuilt configurations found.\n")
+                print(f"No matching {'Under $1000' if prebuilt_option == 1 else 'Under $2000'} 
+                      prebuilt configurations found.\n")
 
         elif option == "3":
             # Search for builds by name
