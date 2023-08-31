@@ -205,25 +205,19 @@ def main():
                 for idx, prebuilt in enumerate(matching_prebuilts, start=1):
                     print(f"{idx}. Configuration: {prebuilt['Configuration']}")
 
-                selected_idx = get_valid_integer_input(
-                    "Select a prebuilt configuration (enter number): "
-                ) - 1
+                selected_idx = get_valid_integer_input("Select a prebuilt configuration (enter number): ") - 1
 
                 if 0 <= selected_idx < len(matching_prebuilts):
                     selected_prebuilt = matching_prebuilts[selected_idx]
-                    print(f"Selected Prebuilt Configuration: "
-                          f"{selected_prebuilt['Configuration']}")
-                    print(f"CPU: {selected_prebuilt['CPU Model']}")
-                    print(f"Motherboard: "
-                          f"{selected_prebuilt['Motherboard Model']}")
-                    print(f"RAM: {selected_prebuilt['RAM Model']}")
-                    print(f"GPU: {selected_prebuilt['GPU Model']}")
-                    print(f"Storage: {selected_prebuilt['Storage Model']}")
-                    print(f"PowerSupply: "
-                          f"{selected_prebuilt['PowerSupply Model']}")
-                    print(f"Case: {selected_prebuilt['Case Model']}")
-                    print(f"Total Price: "
-                          f"{selected_prebuilt['Total Price']}\n")
+                    print(f"Selected Prebuilt Configuration: {selected_prebuilt['Configuration']}")
+                    print(f"CPU: {selected_prebuilt['CPU']}")
+                    print(f"Motherboard: {selected_prebuilt['Motherboard']}")
+                    print(f"RAM: {selected_prebuilt['RAM']}")
+                    print(f"GPU: {selected_prebuilt['GPU']}")
+                    print(f"Storage: {selected_prebuilt['Storage']}")
+                    print(f"PowerSupply: {selected_prebuilt['PowerSupply']}")
+                    print(f"Case: {selected_prebuilt['Case']}")
+                    print(f"Total Price: {selected_prebuilt['Total Price']}\n")
 
                     input("Press Enter to return to the PC configuration")
             else:
