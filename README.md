@@ -76,11 +76,11 @@ Users can select either prebuilt option to view the detailed components and thei
 
 ### Search Builds by Name
 
-    Users can search for and retrieve previously saved custom builds using the build name or configuration description. This feature allows users to find and review their past configurations for reference or modification.
+- Users can search for and retrieve previously saved custom builds using the build name or configuration description. This feature allows users to find and review their past configurations for reference or modification.
 
 ### Exit
 
-    The "Exit" option allows users to gracefully exit the application when they are done exploring and building configurations.
+- The "Exit" option allows users to gracefully exit the application when they are done exploring and building configurations.
 
 The PC Part Picker app provides users with an intuitive and interactive experience, helping them make informed decisions about their PC hardware components based on their preferences and budget. Whether users are building a gaming rig, a workstation, or a general-purpose PC, the app assists in creating the perfect configuration.
 
@@ -127,7 +127,7 @@ The PC Part Picker app underwent thorough testing to ensure that it functions co
 
 ### User Stories
 
-    The app's functionality was tested against a set of user stories to verify that it meets the expected requirements and provides a satisfactory user experience. Some examples of user stories and their testing outcomes include:
+- The app's functionality was tested against a set of user stories to verify that it meets the expected requirements and provides a satisfactory user experience. Some examples of user stories and their testing outcomes include:
 
 1. As a PC enthusiast, I want to be able to explore a variety of components to build my ideal custom PC configuration.
 
