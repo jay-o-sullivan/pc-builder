@@ -35,13 +35,13 @@ Whether you're a PC enthusiast looking to build your dream rig or a user seeking
 
 Upon launching the application, users are greeted with a main menu that offers several options:
 
-   1. **Build a PC**: This option allows users to create their own custom PC configuration by selecting individual components such as CPU, motherboard, GPU, RAM, storage, power supply, and case. The app guides users through the process of selecting components and calculates the total price of the configuration.
+1. **Build a PC**: This option allows users to create their own custom PC configuration by selecting individual components such as CPU, motherboard, GPU, RAM, storage, power supply, and case. The app guides users through the process of selecting components and calculates the total price of the configuration.
 
-   2. **Prebuilt PCs**: Users can choose from a selection of prebuilt PC configurations that fit specific budget ranges. The available options include configurations "Under $1000" and "Under $2000." This feature helps users quickly explore preconfigured options that meet their budget and performance requirements.
+2. **Prebuilt PCs**: Users can choose from a selection of prebuilt PC configurations that fit specific budget ranges. The available options include configurations "Under $1000" and "Under $2000." This feature helps users quickly explore preconfigured options that meet their budget and performance requirements.
 
-    3. **Search Builds by Name**: Users can search for previously saved custom builds using either the build name or configuration description. This feature is helpful for users who want to revisit and review their previous configurations.
+3. **Search Builds by Name**: Users can search for previously saved custom builds using either the build name or configuration description. This feature is helpful for users who want to revisit and review their previous configurations.
 
-    4. **Exit**: This option allows users to exit the application.
+4. **Exit**: This option allows users to exit the application.
     
 
 ### Build a PC
