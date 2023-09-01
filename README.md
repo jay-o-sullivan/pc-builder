@@ -1,10 +1,10 @@
 # PC Part Picker
 
-    Welcome to PC Part Picker! This repository hosts an interactive Python application designed to help users build their own custom PC configurations or select from a variety of prebuilt options. With PC Part Picker, users can explore a wide range of components such as CPUs, motherboards, GPUs, RAM, storage, power supplies, and cases, and create their ideal PC configuration based on their budget and preferences.
+Welcome to PC Part Picker! This repository hosts an interactive Python application designed to help users build their own custom PC configurations or select from a variety of prebuilt options. With PC Part Picker, users can explore a wide range of components such as CPUs, motherboards, GPUs, RAM, storage, power supplies, and cases, and create their ideal PC configuration based on their budget and preferences.
 
-    The application provides a user-friendly interface that allows users to make component selections, calculate the total price of their configurations, and even save and search for their custom builds. Additionally, users can choose from a selection of prebuilt PC configurations to find the perfect fit for their needs.
+The application provides a user-friendly interface that allows users to make component selections, calculate the total price of their configurations, and even save and search for their custom builds. Additionally, users can choose from a selection of prebuilt PC configurations to find the perfect fit for their needs.
 
-    Whether you're a PC enthusiast looking to build your dream rig or a user seeking a prebuilt solution, PC Part Picker is here to assist you in making informed decisions about your PC hardware.
+Whether you're a PC enthusiast looking to build your dream rig or a user seeking a prebuilt solution, PC Part Picker is here to assist you in making informed decisions about your PC hardware.
 
 
 ## Table of Contents
@@ -150,15 +150,6 @@ The PC Part Picker app underwent thorough testing to ensure that it functions co
 10. As a user, I want to receive accurate information about the components, including their model names, prices, and specifications.
 
 11. As a user, I want to exit the application gracefully when I'm done exploring configurations or building a PC.
-
-13. As a PC enthusiast, I want the application to alert me if I choose components that may not be compatible with each other.
-
-14. As a user, I want to see reviews and ratings for different components to help me make informed decisions about their quality and performance.
-
-15. As a user, I want to receive notifications about price drops or deals on selected components to save money on my build.
-
-16. As a user, I want to compare multiple configurations side by side to help me decide which one best meets my needs and preferences.
-
 
 ## Issues Fixed
 
