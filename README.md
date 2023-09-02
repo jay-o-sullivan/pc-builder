@@ -85,8 +85,7 @@ When users choose the "Build a PC" option, they are guided through the process o
 
 ![Cases](images/cases.png)
 
-- **Case**:   
-        Users can select a computer case that accommodates their chosen components.
+- **Case**: Users can select a computer case that accommodates their chosen components.
 
 Once all components are selected, the app calculates and displays the total price of the configuration. Users have the option to publish the build by providing a name for it.
 
@@ -125,36 +124,34 @@ The PC Part Picker app provides users with an intuitive and interactive experien
 
 ### Future Enhancements
 
-In this section of the README, you can mention potential future enhancements or features that you plan to add to the PC Part Picker app. These enhancements might include:
+1. **User Accounts**: Implementing user accounts could allow users to save their configurations and access them across different sessions or devices.
 
-- **User Accounts**: Implementing user accounts could allow users to save their configurations and access them across different sessions or devices.
+2. **Component Compatibility Check**: Adding a compatibility check feature that ensures selected components are compatible with each other could help users avoid compatibility issues.
 
-- **Component Compatibility Check**: Adding a compatibility check feature that ensures selected components are compatible with each other could help users avoid compatibility issues.
+3. **Component Reviews**: Integrating component reviews and ratings could provide users with additional insights before making their selections.
 
-- **Component Reviews**: Integrating component reviews and ratings could provide users with additional insights before making their selections.
+4. **Price Tracking**: Offering price tracking functionality to notify users of price drops or deals on their selected components.
 
-- **Price Tracking**: Offering price tracking functionality to notify users of price drops or deals on their selected components.
+5. **Comparison Tool**: Creating a comparison tool that allows users to compare multiple configurations side by side.
 
-- **Comparison Tool**: Creating a comparison tool that allows users to compare multiple configurations side by side.
-
-- **Export and Sharing**: Enabling users to export their configurations or share them with others through URLs or social media.
+6. **Export and Sharing**: Enabling users to export their configurations or share them with others through URLs or social media.
 
 
 ## Technologies Used
 
 The PC Part Picker app was developed using a combination of programming languages, frameworks, and tools. Here is a list of the key technologies used in the development process:
 
-   - **Python**: The core logic of the application, including user interactions and data processing, was implemented using the Python programming language.
+  - **Python**: The core logic of the application, including user interactions and data processing, was implemented using the Python programming language.
 
-   - **Google Sheets API**: The app leverages the Google Sheets API to read and write data to Google Sheets, allowing users to select components, save builds, and retrieve information.
+  - **Google Sheets API**: The app leverages the Google Sheets API to read and write data to Google Sheets, allowing users to select components, save builds, and retrieve information.
 
-   - **gspread**: The gspread library was used to interact with the Google Sheets API in Python, enabling seamless communication between the app and the Google Sheets spreadsheets.
+  - **gspread**: The gspread library was used to interact with the Google Sheets API in Python, enabling seamless communication between the app and the Google Sheets spreadsheets.
 
-   - **Google OAuth**: The app utilizes Google OAuth 2.0 for secure user authentication and authorization to access Google Sheets data.
+  - **Google OAuth**: The app utilizes Google OAuth 2.0 for secure user authentication and authorization to access Google Sheets data.
 
-   - **CodeAnywhere**: The development environment was set up and managed using CodeAnywhere, providing an online platform for coding, testing, and collaboration.
+  - **CodeAnywhere**: The development environment was set up and managed using CodeAnywhere, providing an online platform for coding, testing, and collaboration.
 
-   - **Heroku**: The PC Part Picker app was deployed using Heroku, a cloud platform that allows applications to be hosted and accessible online.
+  - **Heroku**: The PC Part Picker app was deployed using Heroku, a cloud platform that allows applications to be hosted and accessible online.
 
 
 ## Testing
@@ -189,11 +186,11 @@ The PC Part Picker app underwent thorough testing to ensure that it functions co
 
 ## Issues Fixed
 
-| Issues  |                              | Fixed  |
-| ---     |                              |  ---   |
-| Long-Lines |                           | No |
-| Indentation |                          | Yes |
-| Syntax Errors |                        | Yes |
+| Issues |                           | Fixed |
+| --- |                              | --- |
+| Long-Lines |                       | No |
+| Indentation |                      | Yes |
+| Syntax Errors |                    | Yes |
 
 
 ## Manual Testing
