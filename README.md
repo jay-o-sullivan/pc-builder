@@ -22,6 +22,7 @@ Whether you're a PC enthusiast looking to build your dream rig or a user seeking
   - [Manual Testing](#manual-testing)
   - [Validators Used](#validators-used)
   - [Deployment](#deployment)
+
   - [Run code locally](#run-code-locally)
   - [Cloning](#cloning)
   - [Credits](#credits)
