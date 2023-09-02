@@ -1,5 +1,7 @@
 # PC Part Picker
 
+![PC_Part_Picker](https://pc-builder-5ba08daa774d.herokuapp.com/)
+
 Welcome to PC Part Picker! This repository hosts an interactive Python application designed to help users build their own custom PC configurations or select from a variety of prebuilt options. With PC Part Picker, users can explore a wide range of components such as CPUs, motherboards, GPUs, RAM, storage, power supplies, and cases, and create their ideal PC configuration based on their budget and preferences.
 
 The application provides a user-friendly interface that allows users to make component selections, calculate the total price of their configurations, and even save and search for their custom builds. Additionally, users can choose from a selection of prebuilt PC configurations to find the perfect fit for their needs.
@@ -28,12 +30,21 @@ Whether you're a PC enthusiast looking to build your dream rig or a user seeking
     - [Media](#media)
   - [Acknowledgements](#acknowledgements)
 
+## Flowchart
+
+![Flowchart](images/flowchart.drawio.pdf)
+
 
 ## Features
+
+![Welcome](images/welcome.png)
+
 
 ### Main Menu
 
 Upon launching the application, users are greeted with a main menu that offers several options:
+
+![Main_menu](images/username_entered.png)
 
 1. **Build a PC**: This option allows users to create their own custom PC configuration by selecting individual components such as CPU, motherboard, GPU, RAM, storage, power supply, and case. The app guides users through the process of selecting components and calculates the total price of the configuration.
 
@@ -46,29 +57,52 @@ Upon launching the application, users are greeted with a main menu that offers s
 
 ### Build a PC
 
- When users choose the "Build a PC" option, they are guided through the process of selecting individual components for their custom configuration:
+    When users choose the "Build a PC" option, they are guided through the process of selecting individual components for their custom configuration:
+
+![cpu](images/option1.png)
 
 - **CPU**: Users can choose a CPU from a list of available options. Each CPU is accompanied by its model name and price.
 
+![Motherboard](images/mb.png)
+
 - **Motherboard**: Similar to CPU selection, users can choose a compatible motherboard for their selected CPU.
+
+![GPU](images/gpu.png)
 
 - **GPU**: Users can select a graphics processing unit (GPU) based on their preferences and performance needs.
 
+![RAM](images/ram.png)
+
 - **RAM**: Users can choose the amount and type of RAM for their configuration.
+
+![Storage](images/storage.png)
 
 - **Storage**: Users can select the storage device, such as an SSD or HDD, based on their storage requirements.
 
+![Powersupply](images/powersupply.png)
+
 - **Power Supply**: Users can choose a power supply unit (PSU) suitable for their configuration.
 
-- **Case**: Users can select a computer case that accommodates their chosen components.
+![Cases](images/cases.png)
 
-    Once all components are selected, the app calculates and displays the total price of the configuration. Users have the option to publish the build by providing a name for it.
+- **Case**:   
+        Users can select a computer case that accommodates their chosen components.
+
+Once all components are selected, the app calculates and displays the total price of the configuration. Users have the option to publish the build by providing a name for it.
+
+
 
 ### Prebuilt PCs
 
+![Prebuilds](images/prebuilt_options.png)
+
 This option presents users with two budget-friendly prebuilt configurations:
 
+![Under_1000](images/under1000.png)
+
   **Under $1000**: Users can view a preconfigured PC build designed to cost under $1000. This option is suitable for budget-conscious users seeking a well-balanced setup.
+
+![Under_2000](images/under2000.png)
 
   **Under $2000**: Users interested in a higher-performance configuration can explore a prebuilt option designed to cost under $2000.
 
@@ -76,9 +110,13 @@ Users can select either prebuilt option to view the detailed components and thei
 
 ### Search Builds by Name
 
+![Search](images/search_name.png)
+
 - Users can search for and retrieve previously saved custom builds using the build name or configuration description. This feature allows users to find and review their past configurations for reference or modification.
 
 ### Exit
+
+![Exit](images/exit.png)
 
 - The "Exit" option allows users to gracefully exit the application when they are done exploring and building configurations.
 
@@ -155,18 +193,75 @@ The PC Part Picker app underwent thorough testing to ensure that it functions co
 
 | Issues  |                              | Fixed  |
 | ---     |                              |  ---   |
+| Long-Lines |                           | No |
+| Indentation |                          | Yes |
+| Syntax Errors |                        | Yes |
 
 
 ## Manual Testing
 
 Manual testing was performed to ensure the accuracy of calculations, proper display of information, and seamless navigation through the app's menu options. The testing covered scenarios such as:
 
-- Selecting different components and ensuring their prices are accurately calculated in the total price.
-- Choosing various prebuilt configurations to verify that the correct details are displayed.
-- Searching for builds by name and checking if the matching builds are accurately presented.
-- Exiting the app to make sure it works as intended
-  
+### Test Case 1: Building a Custom PC Configuration
+
+1. **Test Scenario:** Selecting a CPU, motherboard, GPU, RAM, storage, power supply, and case to build a custom PC configuration.
+
+   - **Expected Output:** The application guides the user through each selection, and the total price of the configuration is displayed accurately.
+
+![Build](images/build_saved.png)
+
+
+### Test Case 2: Viewing Prebuilt PC Configurations
+
+2. **Test Scenario:** Choosing the "Prebuilt PCs" option and selecting a preconfigured PC build.
+
+   - **Expected Output:** The app displays the details of the selected prebuilt configuration, including its components and total price.
+
+![Prebuild](images/prebuilt1.png)
+
+### Test Case 3: Searching for Builds by Name
+
+3. **Test Scenario:** Using the "Search Builds by Name" option to search for a custom build by name.
+
+   - **Expected Output:** The app lists the matching builds along with their components and prices.
+
+![Search](images/match-found.png)
+
+### Test Case 4: Exiting the Application
+
+4. **Test Scenario:** Choosing the "Exit" option from the main menu.
+
+   - **Expected Output:** The application gracefully exits without errors.
+
+![Exit](images/end.png)
+
+5. **Test Scenario:** Entering invalid input, such as non-numeric characters or out-of-range numbers.
+
+   - **Expected Output:** The app should display an error message and guide the user to enter valid input.
+
+![Invalid](images/invalid.png)
+
+### Test Case 6: Testing Invalid Component Selections
+
+6. **Test Scenario:** Attempting to select components with invalid options, such as non-existent CPUs, motherboards, or GPUs.
+
+   - **Expected Output:** The application should handle invalid selections gracefully and provide clear error messages.
+
+![Invalid-component](images/invalid_cpu.png)
+
+### Test Case 7: Invalid Prebuild Option
+
+7. **Test Scenario:** Choosing an invalid prebuild option, such as 3 when only "Under $1000" and "Under $2000" are available.
+
+   - **Expected Output:** The app should inform the user that the selected option is not available and guide them to choose a valid one.
+
+![Invalid-prebuild](images/invalid_input_prebuilt.png)
+
 ## Validators Used
+
+During the development of the PC Part Picker application, the following code validation tool was used to ensure code quality and adherence to coding standards:
+
+![Validator](images/python-check.png)
 
 [CI Python Linter](https://pep8ci.herokuapp.com/#)
 
@@ -201,7 +296,7 @@ Heroku is a popular cloud platform that allows you to host web applications. To 
 
 ### Codeanywhere
 
-CodeAnywhere is an online development environment that you can use to code and deploy your PC Part Picker app. Here's how to deploy it on CodeAnywhere:
+    CodeAnywhere is an online development environment that you can use to code and deploy your PC Part Picker app. Here's how to deploy it on CodeAnywhere:
 
 1. Sign up for a CodeAnywhere account if you don't already have one.
 
@@ -245,13 +340,18 @@ For more information on
 ### Content
 
 - [Code Institute Solutions - README Template](https://github.com/Code-Institute-Solutions/readme-template)
-
+- [PCPartPicker](https://pcpartpicker.com/builds/)
+- [Python](https://www.python.org/)
   
 ### Media
 
+The images used in the manual testing section were created by me and are part of the PC Part Picker project.
 
 
 ## Acknowledgements
 
 - Student Support.
 - Mitko Bachvarov Mentor.
+- [TingPNG](https://tinypng.com/)
+- [GitHub](https://github.com/jay-o-sullivan/ms2Project/edit/main/README.md).
+
