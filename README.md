@@ -2,11 +2,11 @@
 
 ![PC_Part_Picker](https://pc-builder-5ba08daa774d.herokuapp.com/)
 
-Welcome to PC Part Picker! This repository hosts an interactive Python application designed to help users build their own custom PC configurations or select from a variety of prebuilt options. With PC Part Picker, users can explore a wide range of components such as CPUs, motherboards, GPUs, RAM, storage, power supplies, and cases, and create their ideal PC configuration based on their budget and preferences.
+- Welcome to PC Part Picker! This repository hosts an interactive Python application designed to help users build their own custom PC configurations or select from a variety of prebuilt options. With PC Part Picker, users can explore a wide range of components such as CPUs, motherboards, GPUs, RAM, storage, power supplies, and cases, and create their ideal PC configuration based on their budget and preferences.
 
-The application provides a user-friendly interface that allows users to make component selections, calculate the total price of their configurations, and even save and search for their custom builds. Additionally, users can choose from a selection of prebuilt PC configurations to find the perfect fit for their needs.
+- The application provides a user-friendly interface that allows users to make component selections, calculate the total price of their configurations, and even save and search for their custom builds. Additionally, users can choose from a selection of prebuilt PC configurations to find the perfect fit for their needs.
 
-Whether you're a PC enthusiast looking to build your dream rig or a user seeking a prebuilt solution, PC Part Picker is here to assist you in making informed decisions about your PC hardware.
+- Whether you're a PC enthusiast looking to build your dream rig or a user seeking a prebuilt solution, PC Part Picker is here to assist you in making informed decisions about your PC hardware.
 
 
 ## Table of Contents
@@ -57,7 +57,7 @@ Upon launching the application, users are greeted with a main menu that offers s
 
 ### Build a PC
 
-    When users choose the "Build a PC" option, they are guided through the process of selecting individual components for their custom configuration:
+When users choose the "Build a PC" option, they are guided through the process of selecting individual components for their custom configuration:
 
 ![cpu](images/option1.png)
 
@@ -127,36 +127,34 @@ The PC Part Picker app provides users with an intuitive and interactive experien
 
 In this section of the README, you can mention potential future enhancements or features that you plan to add to the PC Part Picker app. These enhancements might include:
 
-   **User Accounts**: Implementing user accounts could allow users to save their configurations and access them across different sessions or devices.
+- **User Accounts**: Implementing user accounts could allow users to save their configurations and access them across different sessions or devices.
 
-   **Component Compatibility Check**: Adding a compatibility check feature that ensures selected components are compatible with each other could help users avoid compatibility issues.
+- **Component Compatibility Check**: Adding a compatibility check feature that ensures selected components are compatible with each other could help users avoid compatibility issues.
 
-   **Component Reviews**: Integrating component reviews and ratings could provide users with additional insights before making their selections.
+- **Component Reviews**: Integrating component reviews and ratings could provide users with additional insights before making their selections.
 
-   **Price Tracking**: Offering price tracking functionality to notify users of price drops or deals on their selected components.
+- **Price Tracking**: Offering price tracking functionality to notify users of price drops or deals on their selected components.
 
-   **Comparison Tool**: Creating a comparison tool that allows users to compare multiple configurations side by side.
+- **Comparison Tool**: Creating a comparison tool that allows users to compare multiple configurations side by side.
 
-   **Export and Sharing**: Enabling users to export their configurations or share them with others through URLs or social media.
+- **Export and Sharing**: Enabling users to export their configurations or share them with others through URLs or social media.
 
-
-## UX/UI Design
 
 ## Technologies Used
 
 The PC Part Picker app was developed using a combination of programming languages, frameworks, and tools. Here is a list of the key technologies used in the development process:
 
-**Python**: The core logic of the application, including user interactions and data processing, was implemented using the Python programming language.
+   - **Python**: The core logic of the application, including user interactions and data processing, was implemented using the Python programming language.
 
-**Google Sheets API**: The app leverages the Google Sheets API to read and write data to Google Sheets, allowing users to select components, save builds, and retrieve information.
+   - **Google Sheets API**: The app leverages the Google Sheets API to read and write data to Google Sheets, allowing users to select components, save builds, and retrieve information.
 
-**gspread**: The gspread library was used to interact with the Google Sheets API in Python, enabling seamless communication between the app and the Google Sheets spreadsheets.
+   - **gspread**: The gspread library was used to interact with the Google Sheets API in Python, enabling seamless communication between the app and the Google Sheets spreadsheets.
 
-**Google OAuth**: The app utilizes Google OAuth 2.0 for secure user authentication and authorization to access Google Sheets data.
+   - **Google OAuth**: The app utilizes Google OAuth 2.0 for secure user authentication and authorization to access Google Sheets data.
 
-**CodeAnywhere**: The development environment was set up and managed using CodeAnywhere, providing an online platform for coding, testing, and collaboration.
+   - **CodeAnywhere**: The development environment was set up and managed using CodeAnywhere, providing an online platform for coding, testing, and collaboration.
 
-**Heroku**: The PC Part Picker app was deployed using Heroku, a cloud platform that allows applications to be hosted and accessible online.
+   - **Heroku**: The PC Part Picker app was deployed using Heroku, a cloud platform that allows applications to be hosted and accessible online.
 
 
 ## Testing
