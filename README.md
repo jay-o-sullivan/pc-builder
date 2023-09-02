@@ -14,7 +14,7 @@ Whether you're a PC enthusiast looking to build your dream rig or a user seeking
   - [Table of Contents](#table-of-contents)
   - [Features](#features)
     - [Future Enhancements](#future-enhancements)
-  - [UX/UI Design](#ux-design)
+
   - [Technologies Used](#technologies-used)
   - [Testing](#testing)
     - [User Stories](#user-stories)
@@ -22,7 +22,6 @@ Whether you're a PC enthusiast looking to build your dream rig or a user seeking
   - [Manual Testing](#manual-testing)
   - [Validators Used](#validators-used)
   - [Deployment](#deployment)
-    - [Codeanwhere](#codeanywhere)
   - [Run code locally](#run-code-locally)
   - [Cloning](#cloning)
   - [Credits](#credits)
