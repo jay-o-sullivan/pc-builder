@@ -186,8 +186,8 @@ The PC Part Picker app underwent thorough testing to ensure that it functions co
 
 ## Issues Fixed
 
-| Issues |                           | Fixed |
-| --- |                              | --- |
+| Issues |            | Fixed |
+| --- |                             | --- |
 | Long-Lines |                       | No |
 | Indentation |                      | Yes |
 | Syntax Errors |                    | Yes |
